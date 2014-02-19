@@ -19,3 +19,34 @@
 "   Version: 0.0.1 - 2014/02/18
 "
 " }
+
+ if has('vim_starting')
+   set nocompatible               " Be iMproved
+
+   " Required:
+   set runtimepath+=~/.laravim/bundle/neobundle.vim/
+ endif
+
+ " Required:
+ call neobundle#rc(expand('~/.laravim/bundle/'))
+
+ " Let NeoBundle manage NeoBundle
+ " Required:
+NeoBundleFetch 'Shougo/neobundle.vim' " (https://github.com/Shougo/neobundle.vim)
+
+" Bundles & Bundle Settings
+if filereadable(expand("~/.laravim/laravim.bundles"))
+    source ~/.laravim/laravim.bundles
+endif
+
+" General
+if filereadable(expand("~/.laravim/laravim.general"))
+    source ~/.laravim/laravim.general
+endif
+
+ " Required:
+ filetype plugin indent on
+
+ " If there are uninstalled bundles found on startup,
+ " this will conveniently prompt you to install them.
+ NeoBundleCheck

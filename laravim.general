@@ -1,0 +1,6 @@
+set number        " Show line numbers
+set background=dark
+colorscheme solarized
+set guifont=Menlo\ for\ Powerline:h16
+set guioptions-=T  " remove toolbar
+set cursorline
